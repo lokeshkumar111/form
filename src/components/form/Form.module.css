@@ -1,0 +1,25 @@
+.mainDiv{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+}
+.mainDiv>form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap:10px;
+    border: 1px solid grey;
+    padding: 20px;
+    width: fit-content;
+    margin:auto;
+}
+.mainDiv>form>input{
+    width: max-content;
+    margin:auto;
+}
+.mainDiv>form>input:last-child{
+    width: max-content;
+    margin:auto;
+    margin-top: 20px;
+}

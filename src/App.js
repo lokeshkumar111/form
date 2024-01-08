@@ -1,10 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Form from "./components/form/Form";
 function App() {
   return (
     <div className="App">
-      <p>this is app.js</p>
+      <Form/>
     </div>
   );
 }
