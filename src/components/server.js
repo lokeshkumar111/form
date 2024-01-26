@@ -36,17 +36,17 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const corsOptions = {
-  origin: "http://localhost:3001/",  // Allow requests from any origin (replace with your frontend's URL in production)
+  origin: "http://localhost:3000/",  // Allow requests from any origin (replace with your frontend's URL in production)
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true,
   optionsSuccessStatus: 204,
 };
 
 app.use(cors(corsOptions));
-app.options("http://localhost:3001/", cors(corsOptions));
+app.options("http://localhost:3000/", cors(corsOptions));
 
 app.post("/sendData", async (req, res) => { 
-  const { name } = req.body;
+  const name = req.body.name;
   try {
     await collection.insertMany([{ name: name }])
     const allData = await collection.find({});
